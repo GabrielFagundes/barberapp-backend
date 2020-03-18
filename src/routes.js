@@ -6,6 +6,7 @@ import UserController from './app/constrollers/UserController';
 import SessionController from './app/constrollers/SessionController';
 import FileController from './app/constrollers/FileController';
 import ProviderController from './app/constrollers/ProviderController';
+import AppointmentController from './app/constrollers/AppointmentController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -25,6 +26,8 @@ routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 
 routes.get('/providers', ProviderController.index);
+
+routes.post('/appointments', AppointmentController.store);
 
 routes.post('/files', upload.single('file'), FileController.store);
 
