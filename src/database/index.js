@@ -28,7 +28,8 @@ class Database {
       'mongodb://localhost:27017/barberapp',
       {
         useNewUrlParser: true,
-        useFindAndModify: true
+        useFindAndModify: true,
+        useUnifiedTopology: true
       }
     );
   }
